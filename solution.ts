@@ -86,13 +86,13 @@ const getUniqueValues = (array1: any[], array2: any[]) => {
 
   for (let i = 0; i < array1.length; i++) {
     if (!have(uniqueValuesArr, array1[i])) {
-      uniqueValuesArr.push(array1[i]);
+      uniqueValuesArr[uniqueValuesArr.length] = array1[i];
     }
   }
 
   for (let i = 0; i < array2.length; i++) {
     if (!have(uniqueValuesArr, array2[i])) {
-      uniqueValuesArr.push(array2[i]);
+      uniqueValuesArr[uniqueValuesArr.length] = array2[i];
     }
   }
   return uniqueValuesArr;
